@@ -39,7 +39,6 @@ app.layout = html.Div(children=[
      Input('date_range', 'start_date'),
      Input('date_range', 'end_date'), ])
 def update_graph(check_list, start_date, end_date):
-    print(start_date, end_date)
     start_date = pd.to_datetime(start_date)
     end_date = pd.to_datetime(end_date)
     df = df_init[df_init['platform'].isin(check_list)]
